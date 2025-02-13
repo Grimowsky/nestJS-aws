@@ -2,7 +2,7 @@ name: CI/CD process
 
 on:
   push:
-    branches: ['main']
+    branches: ['master']
 
 jobs:
   build:
