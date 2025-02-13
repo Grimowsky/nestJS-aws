@@ -52,7 +52,7 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-aws:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/nestjs-aws:${{ steps.vars.outputs.sha_short }}
-            build-args: |
+          build-args: |
             GIT_COMMIT=${{ steps.vars.outputs.sha_short }}
-            cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/nestjs-aws:latest
-            cache-to: type=inline
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/nestjs-aws:latest
+          cache-to: type=inline
